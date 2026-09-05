@@ -16,10 +16,12 @@ targets:
     type: application
     platform: macOS
     sources:
-      - ClipboardBuddy
+      - path: ClipboardBuddy
+        excludes:
+          - Resources/GoogleService-Info.plist
     resources:
-      - path: ClipboardBuddy/Resources
-        optional: true
+      - path: ClipboardBuddy/Resources/GoogleService-Info.plist
+      - path: ClipboardBuddy/Resources/Localizable.xcstrings
     dependencies:
       - package: shared-buddy
         product: BuddyCore
@@ -37,6 +39,7 @@ targets:
       LD_RUNPATH_SEARCH_PATHS: "@executable_path/../Frameworks"
       ENABLE_HARDENED_RUNTIME: true
       ENABLE_TESTABILITY: true
+      OTHER_LDFLAGS: "$(inherited) -ObjC"
     scheme:
       testTargets:
         - ClipboardBuddyTests

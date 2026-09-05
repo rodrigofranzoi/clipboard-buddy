@@ -1,5 +1,6 @@
 import SwiftUI
 import BuddyCore
+import BuddyFirebase
 
 struct SettingsView: View {
     @EnvironmentObject private var store: ClipboardStore
@@ -13,6 +14,10 @@ struct SettingsView: View {
             }
             Section("Privacy") {
                 Toggle("Share anonymous analytics", isOn: $analyticsOptIn)
+                    .onChange(of: analyticsOptIn) { enabled in
+                        BuddyFirebase.analyticsOptIn = enabled
+                        BuddyFirebase.refreshAnalyticsCollection()
+                    }
                 Toggle("Launch at login", isOn: $launchAtLogin)
             }
         }

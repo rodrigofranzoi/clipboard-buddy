@@ -1,9 +1,9 @@
-# Firebase (macOS)
+# Firebase
 
-1. Create a Firebase project (shared suite project recommended).
-2. Add a **macOS** app with the bundle ID from MANIFEST.md.
-3. Download `GoogleService-Info.plist` into the app target root (do not commit secrets to public forks if restricted).
-4. Add Firebase Analytics + Crashlytics SPM products in Xcode.
-5. Keep `BuddyFirebase.configure()` as the first launch call.
+This app uses the shared **Buddy Suite** Firebase project on the **Spark (free)** plan.
 
-No clipboard, screenshot pixels, email bodies, or OTP codes may be logged.
+See [shared-buddy docs](https://github.com/rodrigofranzoi/shared-buddy/blob/main/docs/firebase/README.md).
+
+- Project: `buddy-suite-macos`
+- Products: Analytics (opt-in) + Crashlytics
+- Config: `Resources/GoogleService-Info.plist`

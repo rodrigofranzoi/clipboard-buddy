@@ -24,5 +24,7 @@
 	<string>Copyright © Buddy</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSApplicationCrashOnExceptions</key>
+	<true/>
 </dict>
 </plist>
