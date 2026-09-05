@@ -22,6 +22,15 @@ See suite contract patterns from [shared-buddy](https://github.com/rodrigofranzo
 
 Clipboard history with images, auto-tags, favorites, and menu-bar shortcuts.
 
+
+## Design system & atomic components
+
+Apps **must** use the shared Buddy design system (tokens + atomic components) from `shared-buddy` / `BuddyUI`.
+
+- Do not invent one-off colors, radii, or spacing in this app.
+- Compose screens from atoms/molecules; upstream new UI to `BuddyUI`.
+- Full contract: [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) (source of truth also in shared-buddy).
+
 ## Related docs
 
 - [FEATURES.md](FEATURES.md)
