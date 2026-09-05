@@ -25,3 +25,8 @@ N/A — macOS only.
 ## Other locales
 
 Translate name/subtitle/description into: nl, pt, es, fr, it, ar, zh, ru, ja (see LOCALIZATION.md).
+
+## Legal URLs (App Store Connect)
+
+- Privacy: https://rodrigofranzoi.github.io/clipboard-buddy/privacy.html
+- Terms: https://rodrigofranzoi.github.io/clipboard-buddy/terms.html
