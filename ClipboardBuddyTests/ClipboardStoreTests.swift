@@ -20,4 +20,12 @@ final class ClipboardStoreTests: XCTestCase {
         store.addFavorite(name: "Email", content: "me@example.com")
         XCTAssertEqual(store.favorites.first?.name, "Email")
     }
+
+    @MainActor
+    func testBlocksAdultContentFavorite() {
+        let store = ClipboardStore()
+        let before = store.favorites.count
+        store.addFavorite(name: "Bad", content: "free porn video")
+        XCTAssertEqual(store.favorites.count, before)
+    }
 }

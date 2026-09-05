@@ -17,10 +17,13 @@ final class ClipboardStore: ObservableObject {
 
     private var timer: Timer?
     private var lastChangeCount: Int = -1
-    private let defaultsKey = "clipboard.history"
-    private let favoritesKey = "clipboard.favorites"
+    private let database: BuddyDatabase?
+
+    private let legacyHistoryKey = "clipboard.history"
+    private let legacyFavoritesKey = "clipboard.favorites"
 
     init() {
+        database = try? BuddyDatabase(appFolderName: "ClipboardBuddy")
         load()
     }
 
@@ -44,23 +47,55 @@ final class ClipboardStore: ObservableObject {
         }
     }
 
+    func stopMonitoring() {
+        timer?.invalidate()
+        timer = nil
+    }
+
     func pollPasteboard() {
         let pb = NSPasteboard.general
         guard pb.changeCount != lastChangeCount else { return }
         lastChangeCount = pb.changeCount
 
         if let image = NSImage(pasteboard: pb), let tiff = image.tiffRepresentation {
-            let tagged = ContentTagger.tag(.image)
-            let item = ClipboardHistoryItem(imageData: tiff, tags: Array(tagged.tags), isSensitive: tagged.isSensitive)
-            prepend(item)
+            let change = lastChangeCount
+            Task { @MainActor in
+                let safety = await ContentSafety.evaluate(imageData: tiff)
+                guard self.lastChangeCount == change else { return }
+                if safety.isBlocked {
+                    self.handleBlockedContent()
+                    return
+                }
+                let tagged = ContentTagger.tag(.image)
+                let item = ClipboardHistoryItem(imageData: tiff, tags: Array(tagged.tags), isSensitive: tagged.isSensitive)
+                self.prepend(item)
+            }
             return
         }
 
         if let str = pb.string(forType: .string), !str.isEmpty {
+            if ContentSafety.evaluate(text: str).isBlocked {
+                handleBlockedContent()
+                return
+            }
             let tagged = ContentTagger.tag(text: str)
             let item = ClipboardHistoryItem(text: str, tags: Array(tagged.tags), isSensitive: tagged.isSensitive)
             prepend(item)
         }
+    }
+
+    func addFavorite(name: String, content: String) {
+        if ContentSafety.evaluate(text: content).isBlocked {
+            handleBlockedContent()
+            return
+        }
+        favorites.insert(FavoriteShortcut(name: name, content: content), at: 0)
+        save()
+    }
+
+    private func handleBlockedContent() {
+        BuddyFirebase.log(event: BuddyFirebase.Event.contentBlocked)
+        ContentSafety.notifyBlocked()
     }
 
     func prepend(_ item: ClipboardHistoryItem) {
@@ -94,11 +129,6 @@ final class ClipboardStore: ObservableObject {
         BuddyFirebase.log(event: BuddyFirebase.Event.favoriteCopied)
     }
 
-    func addFavorite(name: String, content: String) {
-        favorites.insert(FavoriteShortcut(name: name, content: content), at: 0)
-        save()
-    }
-
     func removeFavorite(_ id: UUID) {
         favorites.removeAll { $0.id == id }
         save()
@@ -124,23 +154,50 @@ final class ClipboardStore: ObservableObject {
     }
 
     private func save() {
-        if let data = try? JSONEncoder().encode(items) {
-            UserDefaults.standard.set(data, forKey: defaultsKey)
-        }
-        if let data = try? JSONEncoder().encode(favorites) {
-            UserDefaults.standard.set(data, forKey: favoritesKey)
-        }
+        guard let database else { return }
+        try? database.saveSealedJSON(items, for: .clipboardItems)
+        try? database.saveSealedJSON(favorites, for: .clipboardFavorites)
         UserDefaults.standard.set(retentionDays, forKey: BuddySettingsKey.clipboardRetentionDays)
     }
 
     private func load() {
-        if let data = UserDefaults.standard.data(forKey: defaultsKey),
-           let decoded = try? JSONDecoder().decode([ClipboardHistoryItem].self, from: data) {
-            items = decoded
+        if let database {
+            if let loaded = database.loadSealedJSONIfPresent([ClipboardHistoryItem].self, for: .clipboardItems) {
+                items = loaded
+            } else {
+                migrateLegacyHistory(into: database)
+            }
+            if let loaded = database.loadSealedJSONIfPresent([FavoriteShortcut].self, for: .clipboardFavorites) {
+                favorites = loaded
+            } else {
+                migrateLegacyFavorites(into: database)
+            }
+        } else {
+            // Fallback if DB can't open: still migrate attempt from defaults into memory
+            if let data = UserDefaults.standard.data(forKey: legacyHistoryKey),
+               let decoded = try? JSONDecoder().decode([ClipboardHistoryItem].self, from: data) {
+                items = decoded
+            }
+            if let data = UserDefaults.standard.data(forKey: legacyFavoritesKey),
+               let decoded = try? JSONDecoder().decode([FavoriteShortcut].self, from: data) {
+                favorites = decoded
+            }
         }
-        if let data = UserDefaults.standard.data(forKey: favoritesKey),
-           let decoded = try? JSONDecoder().decode([FavoriteShortcut].self, from: data) {
-            favorites = decoded
-        }
+    }
+
+    private func migrateLegacyHistory(into database: BuddyDatabase) {
+        guard let data = UserDefaults.standard.data(forKey: legacyHistoryKey),
+              let decoded = try? JSONDecoder().decode([ClipboardHistoryItem].self, from: data) else { return }
+        items = decoded
+        try? database.saveSealedJSON(items, for: .clipboardItems)
+        UserDefaults.standard.removeObject(forKey: legacyHistoryKey)
+    }
+
+    private func migrateLegacyFavorites(into database: BuddyDatabase) {
+        guard let data = UserDefaults.standard.data(forKey: legacyFavoritesKey),
+              let decoded = try? JSONDecoder().decode([FavoriteShortcut].self, from: data) else { return }
+        favorites = decoded
+        try? database.saveSealedJSON(favorites, for: .clipboardFavorites)
+        UserDefaults.standard.removeObject(forKey: legacyFavoritesKey)
     }
 }

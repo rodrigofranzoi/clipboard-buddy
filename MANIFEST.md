@@ -40,3 +40,4 @@ Apps **must** use the shared Buddy design system (tokens + atomic components) fr
 - [TESTING.md](TESTING.md)
 - [SCREENSHOTS.md](SCREENSHOTS.md)
 - [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md)
+- [ENCRYPTION.md](ENCRYPTION.md)

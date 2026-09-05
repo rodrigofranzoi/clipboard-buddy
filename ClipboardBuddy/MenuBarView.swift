@@ -1,11 +1,20 @@
 import SwiftUI
 import BuddyUI
+import BuddyCore
 
 struct MenuBarView: View {
     @EnvironmentObject private var store: ClipboardStore
+    @EnvironmentObject private var pause: BuddyPauseController
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
+            if pause.isPaused {
+                Text(pause.statusSummary)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .padding([.horizontal, .top])
+            }
+
             Text("Favorites")
                 .font(.headline)
                 .padding([.horizontal, .top])
@@ -40,6 +49,8 @@ struct MenuBarView: View {
             }
 
             Spacer(minLength: 0)
+
+            BuddyPauseControls(pause: pause)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .accessibilityIdentifier("menu-bar-root")
