@@ -1,0 +1,67 @@
+name: ClipboardBuddy
+options:
+  bundleIdPrefix: com.buddy
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+settings:
+  BASE_SDK: macosx
+  SWIFT_VERSION: "5.9"
+  MACOSX_DEPLOYMENT_TARGET: "13.0"
+packages:
+  shared-buddy:
+    path: Vendor/shared-buddy
+targets:
+  ClipboardBuddy:
+    type: application
+    platform: macOS
+    sources:
+      - ClipboardBuddy
+    resources:
+      - path: ClipboardBuddy/Resources
+        optional: true
+    dependencies:
+      - package: shared-buddy
+        product: BuddyCore
+      - package: shared-buddy
+        product: BuddyUI
+      - package: shared-buddy
+        product: BuddyFirebase
+      - package: shared-buddy
+        product: BuddyLocalization
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.buddy.clipboard
+      INFOPLIST_FILE: ClipboardBuddy/Info.plist
+      GENERATE_INFOPLIST_FILE: false
+      CODE_SIGN_ENTITLEMENTS: ClipboardBuddy/ClipboardBuddy.entitlements
+      LD_RUNPATH_SEARCH_PATHS: "@executable_path/../Frameworks"
+      ENABLE_HARDENED_RUNTIME: true
+      ENABLE_TESTABILITY: true
+    scheme:
+      testTargets:
+        - ClipboardBuddyTests
+        - ClipboardBuddyUITests
+  ClipboardBuddyTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - ClipboardBuddyTests
+    dependencies:
+      - target: ClipboardBuddy
+      - package: shared-buddy
+        product: BuddyCore
+      - package: shared-buddy
+        product: BuddyTesting
+    settings:
+      GENERATE_INFOPLIST_FILE: true
+      PRODUCT_BUNDLE_IDENTIFIER: com.buddy.clipboard.tests
+  ClipboardBuddyUITests:
+    type: bundle.ui-testing
+    platform: macOS
+    sources:
+      - ClipboardBuddyUITests
+    dependencies:
+      - target: ClipboardBuddy
+    settings:
+      GENERATE_INFOPLIST_FILE: true
+      PRODUCT_BUNDLE_IDENTIFIER: com.buddy.clipboard.uitests

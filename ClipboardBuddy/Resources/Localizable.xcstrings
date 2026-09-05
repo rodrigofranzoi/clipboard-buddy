@@ -1,0 +1,76 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "History" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "History" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Geschiedenis" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Histórico" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Historial" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Historique" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Cronologia" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "السجل" } },
+        "zh" : { "stringUnit" : { "state" : "translated", "value" : "历史记录" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "История" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "履歴" } }
+      }
+    },
+    "Favorites" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Favorites" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Favorieten" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Favoritos" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Favoritos" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Favoris" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Preferiti" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "المفضلة" } },
+        "zh" : { "stringUnit" : { "state" : "translated", "value" : "收藏" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Избранное" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "お気に入り" } }
+      }
+    },
+    "Copy to Clipboard" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Copy to Clipboard" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Kopiëren naar klembord" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Copiar para a área de transferência" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Copiar al portapapeles" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Copier dans le presse-papiers" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Copia negli appunti" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "نسخ إلى الحافظة" } },
+        "zh" : { "stringUnit" : { "state" : "translated", "value" : "复制到剪贴板" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Копировать в буфер" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "クリップボードにコピー" } }
+      }
+    },
+    "Add Favorite" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Favorite" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Favoriet toevoegen" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Adicionar favorito" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Añadir favorito" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajouter aux favoris" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Aggiungi preferito" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إضافة إلى المفضلة" } },
+        "zh" : { "stringUnit" : { "state" : "translated", "value" : "添加收藏" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "В избранное" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "お気に入りに追加" } }
+      }
+    },
+    "Recent" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Recent" } },
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Recent" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Recentes" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Recientes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Récent" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Recenti" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الأخيرة" } },
+        "zh" : { "stringUnit" : { "state" : "translated", "value" : "最近" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Недавние" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "最近" } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: rodrigofranzoi/shared-buddy
+          path: Vendor/shared-buddy
+      - name: Generate project
+        run: |
+          brew install xcodegen || true
+          xcodegen generate
+      - name: Unit tests
+        run: xcodebuild -scheme ClipboardBuddy -destination 'platform=macOS' test CODE_SIGNING_ALLOWED=NO -only-testing:ClipboardBuddyTests
+      - name: UI smoke tests
+        run: xcodebuild -scheme ClipboardBuddy -destination 'platform=macOS' test CODE_SIGNING_ALLOWED=NO -only-testing:ClipboardBuddyUITests
+        continue-on-error: true
