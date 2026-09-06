@@ -1,30 +1,41 @@
 import SwiftUI
 import BuddyCore
 import BuddyUI
-import BuddyFirebase
 
 struct SettingsView: View {
     @EnvironmentObject private var store: ClipboardStore
-    @AppStorage(BuddySettingsKey.analyticsOptIn) private var analyticsOptIn = false
+
+    private let brand = BuddyBrand.clipboardBuddy
+    private let items: [BuddySettingsItem] = [
+        .appearance,
+        .preferences,
+        .privacy
+    ]
 
     var body: some View {
-        Form {
-            Section("History") {
-                Stepper("Keep \(store.retentionDays) days", value: $store.retentionDays, in: 1...365)
-            }
-            Section("Startup") {
-                BuddyLaunchAtLoginToggle()
-            }
-            Section("Privacy") {
-                Toggle("Share anonymous analytics", isOn: $analyticsOptIn)
-                    .onChange(of: analyticsOptIn) { enabled in
-                        BuddyFirebase.analyticsOptIn = enabled
-                        BuddyFirebase.refreshAnalyticsCollection()
-                    }
+        BuddySettingsSidebarView(brand: brand, items: items) { item in
+            switch item.id {
+            case BuddySettingsItem.appearance.id:
+                BuddyAppearanceSettingsSection(brand: brand)
+            case BuddySettingsItem.preferences.id:
+                ClipboardClippingsSettingsSection {
+                    store.applyHistoryLimits()
+                }
+                BuddyPauseSettingsSection()
+                ClipboardIgnoredAppsSettingsSection()
+                BuddyClearHistorySettingsSection(itemNoun: "clippings") {
+                    store.clearAllHistory()
+                }
+                Section("Startup") {
+                    BuddyLaunchAtLoginToggle()
+                }
+            case BuddySettingsItem.privacy.id:
+                SensitivePrivacySettingsSection()
+                BuddyLegalLinksSection(brand: brand)
+            default:
+                EmptyView()
             }
         }
-        .formStyle(.grouped)
-        .frame(width: 420, height: 280)
         .accessibilityIdentifier("settings")
     }
 }

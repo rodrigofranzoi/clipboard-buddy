@@ -13,18 +13,16 @@
 		42E0DBA88049F280EE1CD2A3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 58A12549D647695BED7C7341 /* Localizable.xcstrings */; };
 		441A18FF579852ADD59E7BD2 /* BuddyCore in Frameworks */ = {isa = PBXBuildFile; productRef = 678910A8621E7FEF18739C7C /* BuddyCore */; };
 		48A3F39FD651FE36B4E85E64 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2BF85D7C83136D435CC127 /* SettingsView.swift */; };
-		538A0E159BEF0B385590299F /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = F065B6F37D9DDA8366218C60 /* FirebaseCore */; };
 		5447166E9D7DB09BC9452888 /* ClipboardBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B809131858006A200C8722 /* ClipboardBuddyApp.swift */; };
 		5D3D6FC912B32968346646AE /* BuddyCore in Frameworks */ = {isa = PBXBuildFile; productRef = 58A3F3E65AFBB8DA6E25C3C0 /* BuddyCore */; };
 		5FEDF81FC7FCC4BEAF1737D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25591A78815577917B80564A /* AppDelegate.swift */; };
 		631AC3C4DD3512FE354D77F5 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41206876FAF65481916617 /* DashboardView.swift */; };
 		64FF63085F1264B917DA8561 /* ClipboardStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E2E75BF84A738D6A3EB44 /* ClipboardStoreTests.swift */; };
-		9E42BA9AE82342D460BEF1B4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CAFEF74FDC9980013AFCCB61 /* FirebaseCrashlytics */; };
+		7B41003CE4E281CB4A1BF1DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1097D456497BBDD9C209EB4C /* Assets.xcassets */; };
 		A68244557AFDB3C271C2758B /* BuddyFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 82BFA92FC7BDC0049BBE5F86 /* BuddyFirebase */; };
 		C673E7DCDCD48E185E1E995F /* BuddyUI in Frameworks */ = {isa = PBXBuildFile; productRef = D9853C411C17E98E4AFABD9E /* BuddyUI */; };
-		C9825D3EB1579067EB87A721 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 384C336B0179E0AAC877475C /* GoogleService-Info.plist */; };
 		CE47D8A5CDCDAE7DA4A11667 /* BuddyTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 61C3703E5AD5952A69413831 /* BuddyTesting */; };
-		E4CAADBA8D757565FD37674A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 363717A0933DD53CD0D9D67D /* FirebaseAnalytics */; };
+		FAB4C5290F92A0402A985F65 /* ClipboardMarketingCaptureRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE65F82CBFFD72EFF77D209 /* ClipboardMarketingCaptureRunner.swift */; };
 		FB18987C89E883DFED346F37 /* ClipboardBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE22762D27790B60D3E57D /* ClipboardBuddyUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,12 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1097D456497BBDD9C209EB4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C785E5CE928C5BF5DFBC957 /* ClipboardBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE0A0EC4602FD4A289C3BCC /* ClipboardBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardBuddy.entitlements; sourceTree = "<group>"; };
 		25591A78815577917B80564A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26B67DC3055475A24F8F90C3 /* ClipboardBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E0008C334C831D4F4F83384 /* ClipboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardStore.swift; sourceTree = "<group>"; };
-		384C336B0179E0AAC877475C /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Resources/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C2BF85D7C83136D435CC127 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		51BF717B567FF26FD02F4956 /* shared-buddy */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "shared-buddy"; path = "Vendor/shared-buddy"; sourceTree = SOURCE_ROOT; };
 		539BFAFE764E9A9B2E2F211F /* ClipboardBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +59,7 @@
 		79B809131858006A200C8722 /* ClipboardBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardBuddyApp.swift; sourceTree = "<group>"; };
 		BF273E6FC48605249A7A0AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CBAE22762D27790B60D3E57D /* ClipboardBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardBuddyUITests.swift; sourceTree = "<group>"; };
+		EBE65F82CBFFD72EFF77D209 /* ClipboardMarketingCaptureRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMarketingCaptureRunner.swift; sourceTree = "<group>"; };
 		ED41206876FAF65481916617 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,9 +81,6 @@
 				C673E7DCDCD48E185E1E995F /* BuddyUI in Frameworks */,
 				A68244557AFDB3C271C2758B /* BuddyFirebase in Frameworks */,
 				2C6CC4BDAF4196BE57E30EAA /* BuddyLocalization in Frameworks */,
-				538A0E159BEF0B385590299F /* FirebaseCore in Frameworks */,
-				E4CAADBA8D757565FD37674A /* FirebaseAnalytics in Frameworks */,
-				9E42BA9AE82342D460BEF1B4 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,15 +91,16 @@
 			isa = PBXGroup;
 			children = (
 				25591A78815577917B80564A /* AppDelegate.swift */,
+				1097D456497BBDD9C209EB4C /* Assets.xcassets */,
 				1EE0A0EC4602FD4A289C3BCC /* ClipboardBuddy.entitlements */,
 				79B809131858006A200C8722 /* ClipboardBuddyApp.swift */,
+				EBE65F82CBFFD72EFF77D209 /* ClipboardMarketingCaptureRunner.swift */,
 				2E0008C334C831D4F4F83384 /* ClipboardStore.swift */,
 				ED41206876FAF65481916617 /* DashboardView.swift */,
 				BF273E6FC48605249A7A0AB2 /* Info.plist */,
 				778A9D82C9077A7C70272DA0 /* MenuBarView.swift */,
 				4C2BF85D7C83136D435CC127 /* SettingsView.swift */,
 				F4031A4B39275CA00C708EB4 /* Resources */,
-				384C336B0179E0AAC877475C /* GoogleService-Info.plist */,
 			);
 			path = ClipboardBuddy;
 			sourceTree = "<group>";
@@ -171,7 +168,6 @@
 				7C82744111F86BD3ADBEC48A /* Sources */,
 				4C7AA9A142805A7AE0239F38 /* Resources */,
 				D8784CFF10039BDED34CD513 /* Frameworks */,
-				BDF9F5439143A56258057F18 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -183,9 +179,6 @@
 				D9853C411C17E98E4AFABD9E /* BuddyUI */,
 				82BFA92FC7BDC0049BBE5F86 /* BuddyFirebase */,
 				0B276E6C7CA269844C578F21 /* BuddyLocalization */,
-				F065B6F37D9DDA8366218C60 /* FirebaseCore */,
-				363717A0933DD53CD0D9D67D /* FirebaseAnalytics */,
-				CAFEF74FDC9980013AFCCB61 /* FirebaseCrashlytics */,
 			);
 			productName = ClipboardBuddy;
 			productReference = 539BFAFE764E9A9B2E2F211F /* ClipboardBuddy.app */;
@@ -263,7 +256,6 @@
 			mainGroup = B505FD8C534140215F02162D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3E7216C917DAF7CCE08CF443 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				6B20994AF8296820C864ED04 /* XCLocalSwiftPackageReference "Vendor/shared-buddy" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -283,34 +275,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B41003CE4E281CB4A1BF1DE /* Assets.xcassets in Resources */,
 				42E0DBA88049F280EE1CD2A3 /* Localizable.xcstrings in Resources */,
-				C9825D3EB1579067EB87A721 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BDF9F5439143A56258057F18 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
-				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
-				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}.debug.dylib",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64403E618561129081625568 /* Sources */ = {
@@ -327,6 +297,7 @@
 			files = (
 				5FEDF81FC7FCC4BEAF1737D7 /* AppDelegate.swift in Sources */,
 				5447166E9D7DB09BC9452888 /* ClipboardBuddyApp.swift in Sources */,
+				FAB4C5290F92A0402A985F65 /* ClipboardMarketingCaptureRunner.swift in Sources */,
 				346A08B679BFB7E4981FEC52 /* ClipboardStore.swift in Sources */,
 				631AC3C4DD3512FE354D77F5 /* DashboardView.swift in Sources */,
 				331C8A2D3AB53E1B5235B1FF /* MenuBarView.swift in Sources */,
@@ -386,10 +357,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = ClipboardBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited) -ObjC",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buddy.clipboard;
 				SDKROOT = macosx;
 			};
@@ -447,7 +415,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -578,10 +546,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = ClipboardBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited) -ObjC",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buddy.clipboard;
 				SDKROOT = macosx;
 			};
@@ -635,26 +600,10 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		3E7216C917DAF7CCE08CF443 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.18.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		0B276E6C7CA269844C578F21 /* BuddyLocalization */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BuddyLocalization;
-		};
-		363717A0933DD53CD0D9D67D /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3E7216C917DAF7CCE08CF443 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 		58A3F3E65AFBB8DA6E25C3C0 /* BuddyCore */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -672,19 +621,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = BuddyFirebase;
 		};
-		CAFEF74FDC9980013AFCCB61 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3E7216C917DAF7CCE08CF443 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
 		D9853C411C17E98E4AFABD9E /* BuddyUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BuddyUI;
-		};
-		F065B6F37D9DDA8366218C60 /* FirebaseCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3E7216C917DAF7CCE08CF443 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

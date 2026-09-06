@@ -5,5 +5,5 @@ This app uses the shared **Buddy Suite** Firebase project on the **Spark (free)*
 See [shared-buddy docs](https://github.com/rodrigofranzoi/shared-buddy/blob/main/docs/firebase/README.md).
 
 - Project: `buddy-suite-macos`
-- Products: Analytics (opt-in) + Crashlytics
+- Products: Analytics + Crashlytics
 - Config: `Resources/GoogleService-Info.plist`
