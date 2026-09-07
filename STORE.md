@@ -4,8 +4,10 @@ Supported locales: `en`, `nl`, `pt`, `es`, `fr`, `it`, `ar`, `zh`, `ru`, `ja`.
 
 ## Legal URLs (App Store Connect)
 
+- App Store ID: `6809226741`
 - Privacy: https://rodrigofranzoi.github.io/clipboard-buddy/privacy.html
 - Terms: https://rodrigofranzoi.github.io/clipboard-buddy/terms.html
+- Rate / write review: https://apps.apple.com/app/id6809226741?action=write-review
 
 ## What's New (all locales)
 

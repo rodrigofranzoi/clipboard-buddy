@@ -112,7 +112,7 @@ struct MenuBarView: View {
             BuddyClearHistoryButton(itemNoun: "clippings") {
                 store.clearAllHistory()
             }
-            BuddyMenuBarAppControls(appName: "Clipboard Buddy")
+            BuddyMenuBarAppControls(appName: "Clipboard Buddy", brand: .clipboardBuddy)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .accessibilityIdentifier("menu-bar-root")

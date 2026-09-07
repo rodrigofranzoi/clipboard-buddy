@@ -385,7 +385,7 @@ final class ClipboardStore: ObservableObject {
     }
 
     func reveal(item: ClipboardHistoryItem, completion: @escaping (Bool) -> Void) {
-        unlockSession.unlock(reason: "Reveal sensitive clipboard item") { success in
+        unlockSession.unlock(reason: String(localized: "Reveal sensitive clipboard item")) { success in
             if success {
                 BuddyFirebase.log(event: BuddyFirebase.Event.sensitiveRevealed)
             }
