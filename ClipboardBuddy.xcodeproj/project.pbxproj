@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182AF92C2ACDE59DB196D871 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C739ACA47856D08AC7FE640 /* GoogleService-Info.plist */; };
 		2C6CC4BDAF4196BE57E30EAA /* BuddyLocalization in Frameworks */ = {isa = PBXBuildFile; productRef = 0B276E6C7CA269844C578F21 /* BuddyLocalization */; };
 		331C8A2D3AB53E1B5235B1FF /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A9D82C9077A7C70272DA0 /* MenuBarView.swift */; };
 		346A08B679BFB7E4981FEC52 /* ClipboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0008C334C831D4F4F83384 /* ClipboardStore.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C739ACA47856D08AC7FE640 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1097D456497BBDD9C209EB4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C785E5CE928C5BF5DFBC957 /* ClipboardBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE0A0EC4602FD4A289C3BCC /* ClipboardBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardBuddy.entitlements; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		F4031A4B39275CA00C708EB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0C739ACA47856D08AC7FE640 /* GoogleService-Info.plist */,
 				58A12549D647695BED7C7341 /* Localizable.xcstrings */,
 			);
 			path = Resources;
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B41003CE4E281CB4A1BF1DE /* Assets.xcassets in Resources */,
+				182AF92C2ACDE59DB196D871 /* GoogleService-Info.plist in Resources */,
 				42E0DBA88049F280EE1CD2A3 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

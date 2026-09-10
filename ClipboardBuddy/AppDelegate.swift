@@ -11,7 +11,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var store: ClipboardStore?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        BuddyLaunchAtLogin.enableByDefaultOnFirstInstall()
         BuddyAppearanceSettings.applyAppKitAppearance()
 
         let store = ClipboardStore.shared
@@ -67,7 +66,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 self?.showPopoverForCapture()
             }
         } else {
-            BuddyMainWindow.hideOnLaunchIfNeeded()
+            BuddyMainWindow.presentFirstLaunchExperienceIfNeeded(
+                appDisplayName: BuddyBrand.clipboardBuddy.displayName
+            )
         }
     }
 

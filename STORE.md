@@ -2,6 +2,13 @@
 
 Supported locales: `en`, `nl`, `pt`, `es`, `fr`, `it`, `ar`, `zh`, `ru`, `ja`.
 
+## App Store Connect — naming (Guideline 5.2.5)
+
+**Use exactly:** `Clipboard Buddy`  
+**Do not use:** `Clipboard Buddy for Mac`, `… for macOS`, or any name that includes Apple product terms (`Mac`, `macOS`, `iPhone`, etc.).
+
+Binary display name (`CFBundleDisplayName` / `CFBundleName`) is already `Clipboard Buddy`. Keep App Store Connect **Name** and on-device name aligned — never append “for Mac”.
+
 ## Legal URLs (App Store Connect)
 
 - App Store ID: `6809226741`
@@ -12,6 +19,39 @@ Supported locales: `en`, `nl`, `pt`, `es`, `fr`, `it`, `ar`, `zh`, `ru`, `ja`.
 ## What's New (all locales)
 
 Initial release.
+
+---
+
+## App Review Notes (Apple)
+
+Paste into App Store Connect → App Review Information → Notes.
+
+```
+Clipboard Buddy is a macOS menu-bar (agent) app. There is no Dock icon by default (LSUIElement).
+
+NO LOGIN / DEMO ACCOUNT REQUIRED.
+
+Launch at login: OFF by default. On first launch the app opens the main window and shows a consent popup (Not Now / Open at Login).
+It only registers as a Login Item if the user chooses Open at Login. Later launches stay menu-bar only. Change anytime in Settings → Preferences → Startup (Guideline 2.4.5(iii)).
+
+How to review:
+1. Launch the app. Look for the clipboard icon in the macOS menu bar.
+2. Copy text, an image, or a file — it should appear in history.
+3. Open the main window / menu bar popover: search, tags, favorites, QR.
+4. Sensitive items may appear blurred; unlock with Touch ID or password if prompted.
+5. Settings: retention, privacy blur/auth, pause capture, optional launch at login.
+
+Permissions / entitlements:
+- App Sandbox enabled.
+- Network client: Firebase Analytics & Crashlytics only.
+- Export compliance: exempt — HTTPS/TLS only (ITSAppUsesNonExemptEncryption = false).
+
+Privacy:
+- Clipboard history stays on device. Never uploaded.
+- Analytics/Crashlytics do not include clipboard payloads.
+
+Contact: use the App Store Connect account owner email if anything is unclear.
+```
 
 ---
 

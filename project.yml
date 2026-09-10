@@ -19,8 +19,9 @@ targets:
       - path: ClipboardBuddy
         excludes:
           - Resources/GoogleService-Info.plist
-    resources:
       - path: ClipboardBuddy/Resources/GoogleService-Info.plist
+        buildPhase: resources
+    resources:
       - path: ClipboardBuddy/Resources/Localizable.xcstrings
     dependencies:
       - package: shared-buddy

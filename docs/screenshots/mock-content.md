@@ -9,7 +9,7 @@ Seed history with:
 | #10B981 | colorHex | yes (Brand green) |
 | •••••••••••• (password) | password | no |
 | NL91 ABNA 0417 1643 00 | iban | no |
-| buddy_demo_api_key_… | apiKey | no |
+| sk_live_51Hq… | apiKey | no |
 | Release notes draft | text, richText | no |
 | https://buddy.app/share/42 | url | for QR sheet |
 
