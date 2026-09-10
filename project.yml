@@ -4,6 +4,20 @@ options:
   deploymentTarget:
     macOS: "13.0"
   createIntermediateGroups: true
+  developmentLanguage: en
+  knownRegions:
+    - Base
+    - en
+    - de
+    - nl
+    - pt
+    - es
+    - fr
+    - it
+    - ar
+    - zh
+    - ru
+    - ja
 settings:
   BASE_SDK: macosx
   SWIFT_VERSION: "5.9"
@@ -33,6 +47,7 @@ targets:
       - package: shared-buddy
         product: BuddyLocalization
     settings:
+      PRODUCT_NAME: ClipLog Buddy
       PRODUCT_BUNDLE_IDENTIFIER: com.buddy.clipboard
       INFOPLIST_FILE: ClipboardBuddy/Info.plist
       GENERATE_INFOPLIST_FILE: false

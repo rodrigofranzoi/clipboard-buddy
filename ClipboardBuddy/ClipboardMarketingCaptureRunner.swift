@@ -8,7 +8,12 @@ import BuddyUI
 enum ClipboardMarketingCaptureRunner {
     private static var hostedWindow: NSWindow?
 
-    static func startIfNeeded(store: ClipboardStore, showPopover: @escaping () -> NSWindow?) {
+    static func startIfNeeded(
+        store: ClipboardStore,
+        showPopover: @escaping () -> NSWindow?,
+        showFloatingHistory: (() -> NSWindow?)? = nil,
+        showFloatingFavorites: (() -> NSWindow?)? = nil
+    ) {
         guard BuddyMarketingCapture.isEnabled else { return }
 
         store.stopMonitoring()
@@ -27,8 +32,10 @@ enum ClipboardMarketingCaptureRunner {
 
                 try await captureMainScenes(store: store, window: window, out: out)
                 try await captureMenubarScenes(showPopover: showPopover, out: out)
+                _ = showFloatingHistory
+                _ = showFloatingFavorites
 
-                print("[BuddyMarketing] Clipboard Buddy captures written to \(out.path)")
+                print("[BuddyMarketing] ClipLog Buddy captures written to \(out.path)")
                 NSApp.terminate(nil)
             } catch {
                 fputs("[BuddyMarketing] ERROR: \(error)\n", stderr)
@@ -46,7 +53,7 @@ enum ClipboardMarketingCaptureRunner {
             .frame(minWidth: 720, minHeight: 480)
         let hosting = NSHostingController(rootView: root)
         let window = NSWindow(contentViewController: hosting)
-        window.title = "Clipboard Buddy"
+        window.title = "ClipLog Buddy"
         window.styleMask = [.titled, .closable, .miniaturizable, .resizable]
         window.setContentSize(NSSize(width: 1040, height: 680))
         window.center()

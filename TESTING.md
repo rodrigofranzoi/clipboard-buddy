@@ -1,4 +1,4 @@
-# Testing — Clipboard Buddy
+# Testing — ClipLog Buddy
 
 ## Unit
 

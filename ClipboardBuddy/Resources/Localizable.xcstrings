@@ -2,11 +2,18 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@ pasteboard flavor%@ stored" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "تم حفظ %1$@ نوع من الحافظة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Pasteboard-Flavor%@ gespeichert"
           }
         },
         "en" : {
@@ -74,6 +81,12 @@
             "value" : "إضافة إلى المفضلة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zu Favoriten hinzufügen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -139,6 +152,12 @@
             "value" : "صورة الحافظة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwischenablage-Bild"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -195,6 +214,9 @@
         }
       }
     },
+    "Color" : {
+
+    },
     "Color swatch" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -202,6 +224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "عينة اللون"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbswatch"
           }
         },
         "en" : {
@@ -269,6 +297,12 @@
             "value" : "تم النسخ"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiert"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -326,11 +360,18 @@
       }
     },
     "Copied to clipboard" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "تم النسخ إلى الحافظة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In die Zwischenablage kopiert"
           }
         },
         "en" : {
@@ -398,6 +439,12 @@
             "value" : "نسخ"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopieren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -463,6 +510,12 @@
             "value" : "نسخ الصورة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bild kopieren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -519,6 +572,77 @@
         }
       }
     },
+    "Copy text, images, or files to build history" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انسخ نصوصًا أو صورًا أو ملفات لبناء السجل"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopieren Sie Text, Bilder oder Dateien, um die Historie aufzubauen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy text, images, or files to build history"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia texto, imágenes o archivos para crear el historial"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiez du texte, des images ou des fichiers pour constituer l’historique"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia testo, immagini o file per creare la cronologia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テキスト・画像・ファイルをコピーして履歴を作成"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopieer tekst, afbeeldingen of bestanden om geschiedenis op te bouwen"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copie texto, imagens ou ficheiros para criar o histórico"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Копируйте текст, изображения или файлы, чтобы заполнить историю"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制文本、图像或文件以建立历史记录"
+          }
+        }
+      }
+    },
     "Copy to clipboard" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -526,6 +650,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "نسخ إلى الحافظة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In die Zwischenablage kopieren"
           }
         },
         "en" : {
@@ -593,6 +723,12 @@
             "value" : "نسخ إلى الحافظة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In die Zwischenablage kopieren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -650,11 +786,18 @@
       }
     },
     "Could not create a QR code for this item." : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "تعذر إنشاء رمز QR لهذا العنصر."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für diesen Eintrag konnte kein QR-Code erstellt werden."
           }
         },
         "en" : {
@@ -722,6 +865,12 @@
             "value" : "تم"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -779,11 +928,18 @@
       }
     },
     "Favorites" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "المفضلة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoriten"
           }
         },
         "en" : {
@@ -843,11 +999,18 @@
       }
     },
     "Files" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "الملفات"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dateien"
           }
         },
         "en" : {
@@ -906,6 +1069,148 @@
         }
       }
     },
+    "Floating Favorites" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفضلات عائمة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwebende Favoriten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Floating Favorites"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoritos flotantes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoris flottants"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferiti mobili"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フローティングのお気に入り"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwevende favorieten"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoritos flutuantes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плавающие избранные"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浮动收藏"
+          }
+        }
+      }
+    },
+    "Floating History" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل عائم"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwebende Historie"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Floating History"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial flotante"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique flottant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cronologia mobile"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フローティング履歴"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwevende geschiedenis"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Histórico flutuante"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плавающая история"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浮动历史"
+          }
+        }
+      }
+    },
     "History" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -913,6 +1218,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "السجل"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historie"
           }
         },
         "en" : {
@@ -971,6 +1282,77 @@
         }
       }
     },
+    "History or Favorites" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السجل أو المفضلات"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historie oder Favoriten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History or Favorites"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial o favoritos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique ou favoris"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cronologia o preferiti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "履歴またはお気に入り"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschiedenis of favorieten"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Histórico ou favoritos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "История или избранное"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历史或收藏"
+          }
+        }
+      }
+    },
     "Image" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -978,6 +1360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "صورة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bild"
           }
         },
         "en" : {
@@ -1045,6 +1433,12 @@
             "value" : "معاينة الصورة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildvorschau"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1110,6 +1504,12 @@
             "value" : "إنشاء رمز QR"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR-Code erstellen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1167,11 +1567,18 @@
       }
     },
     "No favorites yet" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "لا مفضلات بعد"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Favoriten"
           }
         },
         "en" : {
@@ -1230,6 +1637,148 @@
         }
       }
     },
+    "Open floating favorites on launch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فتح المفضلات العائمة عند التشغيل"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwebende Favoriten beim Start öffnen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open floating favorites on launch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir favoritos flotantes al iniciar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir les favoris flottants au démarrage"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri preferiti mobili all’avvio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起動時にフローティングのお気に入りを開く"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwevende favorieten bij starten openen"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir favoritos flutuantes ao iniciar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открывать плавающие избранные при запуске"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动时打开浮动收藏"
+          }
+        }
+      }
+    },
+    "Open floating history on launch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فتح السجل العائم عند التشغيل"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwebende Historie beim Start öffnen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open floating history on launch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir historial flotante al iniciar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir l’historique flottant au démarrage"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri cronologia mobile all’avvio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起動時にフローティング履歴を開く"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwevende geschiedenis bij starten openen"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir histórico flutuante ao iniciar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открывать плавающую историю при запуске"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动时打开浮动历史"
+          }
+        }
+      }
+    },
     "Open link" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1237,6 +1786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "فتح الرابط"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link öffnen"
           }
         },
         "en" : {
@@ -1304,6 +1859,12 @@
             "value" : "فتح الرابط"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Link öffnen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1369,6 +1930,12 @@
             "value" : "رمز QR"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR-Code"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1426,11 +1993,18 @@
       }
     },
     "QR Code" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "رمز QR"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR-Code"
           }
         },
         "en" : {
@@ -1490,11 +2064,18 @@
       }
     },
     "Recent" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "الأخيرة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zuletzt"
           }
         },
         "en" : {
@@ -1562,6 +2143,12 @@
             "value" : "إزالة من المفضلة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus Favoriten entfernen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1625,6 +2212,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "إظهار عنصر الحافظة الحساس"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensiblen Zwischenablage-Eintrag anzeigen"
           }
         },
         "en" : {
@@ -1692,6 +2285,12 @@
             "value" : "بحث"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suchen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1749,11 +2348,18 @@
       }
     },
     "Select an item" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "حدد عنصرًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eintrag auswählen"
           }
         },
         "en" : {
@@ -1812,6 +2418,77 @@
         }
       }
     },
+    "Star a history item to pin it here" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضع نجمة على عنصر في السجل لتثبيته هنا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markieren Sie einen Historieneintrag mit einem Stern, um ihn hier anzuheften"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Star a history item to pin it here"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca un elemento del historial con una estrella para fijarlo aquí"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquez un élément de l’historique d’une étoile pour l’épingler ici"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metti una stella a una voce della cronologia per fissarla qui"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "履歴項目に星を付けるとここに固定されます"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markeer een geschiedenisitem met een ster om het hier vast te zetten"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marque um item do histórico com uma estrela para o fixar aqui"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отметьте элемент истории звёздочкой, чтобы закрепить его здесь"
+          }
+        },
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "给历史记录项加星即可固定到这里"
+          }
+        }
+      }
+    },
     "Startup" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1819,6 +2496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "التشغيل"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
           }
         },
         "en" : {

@@ -1,4 +1,4 @@
-# Deliver defaults for Capture Buddy (macOS App Store)
+# Deliver defaults for ClipLog Buddy (macOS App Store)
 platform("osx")
 force(true)
 skip_binary_upload(false)

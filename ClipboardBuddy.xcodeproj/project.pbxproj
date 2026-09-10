@@ -21,8 +21,10 @@
 		64FF63085F1264B917DA8561 /* ClipboardStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E2E75BF84A738D6A3EB44 /* ClipboardStoreTests.swift */; };
 		7B41003CE4E281CB4A1BF1DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1097D456497BBDD9C209EB4C /* Assets.xcassets */; };
 		A68244557AFDB3C271C2758B /* BuddyFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 82BFA92FC7BDC0049BBE5F86 /* BuddyFirebase */; };
+		BE7DFDD1B5BF749564EC18E7 /* ClipboardCellLeadingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493578B003B6E61678CC9DE /* ClipboardCellLeadingIcon.swift */; };
 		C673E7DCDCD48E185E1E995F /* BuddyUI in Frameworks */ = {isa = PBXBuildFile; productRef = D9853C411C17E98E4AFABD9E /* BuddyUI */; };
 		CE47D8A5CDCDAE7DA4A11667 /* BuddyTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 61C3703E5AD5952A69413831 /* BuddyTesting */; };
+		F481A9373FB637AFE5EE317E /* FloatingClipboardPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628ED093FC1375097C87A67E /* FloatingClipboardPanelController.swift */; };
 		FAB4C5290F92A0402A985F65 /* ClipboardMarketingCaptureRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE65F82CBFFD72EFF77D209 /* ClipboardMarketingCaptureRunner.swift */; };
 		FB18987C89E883DFED346F37 /* ClipboardBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE22762D27790B60D3E57D /* ClipboardBuddyUITests.swift */; };
 /* End PBXBuildFile section */
@@ -56,9 +58,12 @@
 		51BF717B567FF26FD02F4956 /* shared-buddy */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "shared-buddy"; path = "Vendor/shared-buddy"; sourceTree = SOURCE_ROOT; };
 		539BFAFE764E9A9B2E2F211F /* ClipboardBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A12549D647695BED7C7341 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		628ED093FC1375097C87A67E /* FloatingClipboardPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingClipboardPanelController.swift; sourceTree = "<group>"; };
 		6B6E2E75BF84A738D6A3EB44 /* ClipboardStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardStoreTests.swift; sourceTree = "<group>"; };
 		778A9D82C9077A7C70272DA0 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		79B809131858006A200C8722 /* ClipboardBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardBuddyApp.swift; sourceTree = "<group>"; };
+		A493578B003B6E61678CC9DE /* ClipboardCellLeadingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardCellLeadingIcon.swift; sourceTree = "<group>"; };
+		BD505C870CD91EBF03282CD3 /* ClipboardBuddy-Marketing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ClipboardBuddy-Marketing.entitlements"; sourceTree = "<group>"; };
 		BF273E6FC48605249A7A0AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CBAE22762D27790B60D3E57D /* ClipboardBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardBuddyUITests.swift; sourceTree = "<group>"; };
 		EBE65F82CBFFD72EFF77D209 /* ClipboardMarketingCaptureRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMarketingCaptureRunner.swift; sourceTree = "<group>"; };
@@ -94,11 +99,14 @@
 			children = (
 				25591A78815577917B80564A /* AppDelegate.swift */,
 				1097D456497BBDD9C209EB4C /* Assets.xcassets */,
+				BD505C870CD91EBF03282CD3 /* ClipboardBuddy-Marketing.entitlements */,
 				1EE0A0EC4602FD4A289C3BCC /* ClipboardBuddy.entitlements */,
 				79B809131858006A200C8722 /* ClipboardBuddyApp.swift */,
+				A493578B003B6E61678CC9DE /* ClipboardCellLeadingIcon.swift */,
 				EBE65F82CBFFD72EFF77D209 /* ClipboardMarketingCaptureRunner.swift */,
 				2E0008C334C831D4F4F83384 /* ClipboardStore.swift */,
 				ED41206876FAF65481916617 /* DashboardView.swift */,
+				628ED093FC1375097C87A67E /* FloatingClipboardPanelController.swift */,
 				BF273E6FC48605249A7A0AB2 /* Info.plist */,
 				778A9D82C9077A7C70272DA0 /* MenuBarView.swift */,
 				4C2BF85D7C83136D435CC127 /* SettingsView.swift */,
@@ -246,6 +254,7 @@
 			knownRegions = (
 				Base,
 				ar,
+				de,
 				en,
 				es,
 				fr,
@@ -301,9 +310,11 @@
 			files = (
 				5FEDF81FC7FCC4BEAF1737D7 /* AppDelegate.swift in Sources */,
 				5447166E9D7DB09BC9452888 /* ClipboardBuddyApp.swift in Sources */,
+				BE7DFDD1B5BF749564EC18E7 /* ClipboardCellLeadingIcon.swift in Sources */,
 				FAB4C5290F92A0402A985F65 /* ClipboardMarketingCaptureRunner.swift in Sources */,
 				346A08B679BFB7E4981FEC52 /* ClipboardStore.swift in Sources */,
 				631AC3C4DD3512FE354D77F5 /* DashboardView.swift in Sources */,
+				F481A9373FB637AFE5EE317E /* FloatingClipboardPanelController.swift in Sources */,
 				331C8A2D3AB53E1B5235B1FF /* MenuBarView.swift in Sources */,
 				48A3F39FD651FE36B4E85E64 /* SettingsView.swift in Sources */,
 			);
@@ -363,6 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buddy.clipboard;
+				PRODUCT_NAME = "ClipLog Buddy";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -552,6 +564,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buddy.clipboard;
+				PRODUCT_NAME = "ClipLog Buddy";
 				SDKROOT = macosx;
 			};
 			name = Debug;

@@ -1,4 +1,4 @@
-# Clipboard Buddy — mock content for store shots
+# ClipLog Buddy — mock content for store shots
 
 Seed history with:
 

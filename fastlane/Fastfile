@@ -1,4 +1,4 @@
-# Clipboard Buddy — Fastlane entrypoint
+# ClipLog Buddy — Fastlane entrypoint
 # Requires: Vendor/shared-buddy linked, ASC API key env vars (see screenshot-buddy/FASTLANE.md)
 
 ENV["BUDDY_APP_KEY"] ||= "clipboard"
@@ -6,7 +6,7 @@ ENV["BUDDY_SCHEME"] ||= "ClipboardBuddy"
 ENV["BUDDY_XCODEPROJ"] ||= "ClipboardBuddy.xcodeproj"
 ENV["BUDDY_BUNDLE_ID"] ||= "com.buddy.clipboard"
 ENV["BUDDY_APP_STORE_ID"] ||= "6809226741"
-ENV["BUDDY_PRODUCT_NAME"] ||= "Clipboard Buddy"
+ENV["BUDDY_PRODUCT_NAME"] ||= "ClipLog Buddy"
 ENV["BUDDY_TEAM_ID"] ||= "G42Z863W7H"
 ENV["FASTLANE_TEAM_ID"] ||= ENV["BUDDY_TEAM_ID"]
 

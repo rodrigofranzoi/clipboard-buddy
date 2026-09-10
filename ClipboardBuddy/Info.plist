@@ -11,13 +11,13 @@
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleName</key>
-	<string>Clipboard Buddy</string>
+	<string>ClipLog Buddy</string>
 	<key>CFBundleDisplayName</key>
-	<string>Clipboard Buddy</string>
+	<string>ClipLog Buddy</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>

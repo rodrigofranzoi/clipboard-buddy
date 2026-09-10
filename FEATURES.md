@@ -1,4 +1,4 @@
-# Clipboard Buddy Features
+# ClipLog Buddy Features
 
 Status: `planned` | `wip` | `done`
 

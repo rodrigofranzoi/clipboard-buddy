@@ -16,7 +16,7 @@ struct ClipboardBuddyApp: App {
     }
 
     var body: some Scene {
-        WindowGroup("Clipboard Buddy") {
+        WindowGroup(brand.displayName) {
             DashboardView()
                 .environmentObject(store)
                 .frame(minWidth: 720, minHeight: 480)

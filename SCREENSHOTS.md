@@ -1,4 +1,4 @@
-# Screenshots — Clipboard Buddy
+# Screenshots — ClipLog Buddy
 
 ```
 docs/screenshots/{locale}/raw/      # real app window captures
@@ -6,9 +6,15 @@ docs/screenshots/{locale}/banners/ # framed 1280×800 marketing images
 docs/screenshots/mock-content.md
 ```
 
-Locales: `en`, `nl`, `pt`, `es`, `fr`, `it`, `ar`, `zh`, `ru`, `ja`.
+Locales: `en`, `de`, `nl`, `pt`, `es`, `fr`, `it`, `ar`, `zh`, `ru`, `ja`.
 
 ## Capture real UI
+
+```bash
+./scripts/generate-store-screenshots.sh
+```
+
+Or from the monorepo root:
 
 ```bash
 ./shared-buddy/scripts/marketing/capture_real_screenshots.sh all
@@ -21,7 +27,7 @@ Frame existing raws only:
 python3 shared-buddy/scripts/marketing/generate_marketing_banners.py --frame-only
 ```
 
-Banner size: **1280×800**. Brand frame uses the Clipboard Buddy mint / emerald / lime icon gradient.
+Banner size: **1280×800**. Brand frame uses the ClipLog Buddy mint / emerald / lime icon gradient.
 
 ## Required shots
 

@@ -271,6 +271,7 @@ final class ClipboardStore: ObservableObject {
             }
         }
         items.insert(item, at: 0)
+        selectedId = item.id
         prune()
         save()
     }
@@ -307,6 +308,8 @@ final class ClipboardStore: ObservableObject {
     }
 
     func copyToPasteboard(_ item: ClipboardHistoryItem) {
+        guard !isHidden(item) else { return }
+
         let pb = NSPasteboard.general
         pb.clearContents()
 

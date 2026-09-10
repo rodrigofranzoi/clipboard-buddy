@@ -5,6 +5,7 @@
 | Code | Language |
 |------|----------|
 | en | English (source) |
+| de | German |
 | nl | Dutch |
 | pt | Portuguese |
 | es | Spanish |
@@ -17,10 +18,11 @@
 
 > Note: product brief used `zn` / `jp`; ISO codes are `zh` / `ja`.
 
+
 ## Workflow
 
 1. Add keys to Xcode String Catalog (`.xcstrings`)
-2. Export / translate all 10 locales
+2. Export / translate all 11 locales
 3. Verify RTL layout with `ar`
 4. Update [STORE.md](STORE.md) per locale for App Store Connect
 

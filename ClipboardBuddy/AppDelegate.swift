@@ -9,12 +9,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var popover: NSPopover?
     private var popoverOutsideClickMonitors: [Any] = []
     var store: ClipboardStore?
+    private let floatingHistoryPanel = FloatingClipboardPanelController(kind: .history)
+    private let floatingFavoritesPanel = FloatingClipboardPanelController(kind: .favorites)
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         BuddyAppearanceSettings.applyAppKitAppearance()
 
         let store = ClipboardStore.shared
         self.store = store
+        floatingHistoryPanel.attach(store: store)
+        floatingFavoritesPanel.attach(store: store)
         let pause = BuddyPauseController.shared
 
         pause.onPauseChanged = { [weak self] isPaused in
@@ -60,12 +64,61 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
 
+        NotificationCenter.default.addObserver(
+            forName: .clipboardToggleFloatingHistory,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.floatingHistoryPanel.toggle()
+            }
+        }
+
+        NotificationCenter.default.addObserver(
+            forName: .clipboardToggleFloatingFavorites,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.floatingFavoritesPanel.toggle()
+            }
+        }
+
+        NotificationCenter.default.addObserver(
+            forName: .clipboardDismissMenuBarPopover,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.closePopover()
+            }
+        }
+
+        NotificationCenter.default.addObserver(
+            forName: .buddyDismissMenuBarPopover,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.closePopover()
+            }
+        }
+
         if BuddyMarketingCapture.isEnabled {
             NSApp.setActivationPolicy(.regular)
-            ClipboardMarketingCaptureRunner.startIfNeeded(store: store) { [weak self] in
-                self?.showPopoverForCapture()
-            }
+            ClipboardMarketingCaptureRunner.startIfNeeded(
+                store: store,
+                showPopover: { [weak self] in self?.showPopoverForCapture() },
+                showFloatingHistory: { [weak self] in self?.showFloatingHistoryForCapture() },
+                showFloatingFavorites: { [weak self] in self?.showFloatingFavoritesForCapture() }
+            )
         } else {
+            if ClipboardIgnoreSettings.floatingHistoryOnLaunch, !BuddyLaunchAtLogin.needsConsentPrompt {
+                floatingHistoryPanel.show()
+            }
+            if ClipboardIgnoreSettings.floatingFavoritesOnLaunch, !BuddyLaunchAtLogin.needsConsentPrompt {
+                floatingFavoritesPanel.show()
+            }
             BuddyMainWindow.presentFirstLaunchExperienceIfNeeded(
                 appDisplayName: BuddyBrand.clipboardBuddy.displayName
             )
@@ -76,6 +129,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func showPopoverForCapture() -> NSWindow? {
         showPopover()
         return popover?.contentViewController?.view.window
+    }
+
+    @discardableResult
+    private func showFloatingHistoryForCapture() -> NSWindow? {
+        floatingHistoryPanel.show()
+        return floatingHistoryPanel.panelWindow
+    }
+
+    @discardableResult
+    private func showFloatingFavoritesForCapture() -> NSWindow? {
+        floatingFavoritesPanel.show()
+        return floatingFavoritesPanel.panelWindow
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -159,9 +224,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func updateStatusIcon() {
         let paused = BuddyPauseController.shared.isPaused
-        let name = paused ? "doc.on.clipboard.fill" : "doc.on.clipboard"
-        let description = paused ? "Clipboard Buddy (paused)" : "Clipboard Buddy"
-        statusItem?.button?.image = NSImage(systemSymbolName: name, accessibilityDescription: description)
+        let iconName = paused ? "doc.on.clipboard.fill" : "doc.on.clipboard"
+        let displayName = BuddyBrand.clipboardBuddy.displayName
+        let description = paused ? "\(displayName) (paused)" : displayName
+        statusItem?.button?.image = NSImage(systemSymbolName: iconName, accessibilityDescription: description)
         statusItem?.button?.appearsDisabled = paused
     }
 }

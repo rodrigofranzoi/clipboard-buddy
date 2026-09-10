@@ -1,4 +1,4 @@
-# Clipboard Buddy
+# ClipLog Buddy
 
 macOS menu-bar clipboard history with tags, favorites, and accessibility support.
 
