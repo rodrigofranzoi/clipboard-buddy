@@ -5,3 +5,7 @@ build/
 xcuserdata/
 *.xcworkspace/xcuserdata/
 Vendor/shared-buddy
+
+# Firebase client config (API key) — keep local; do not commit
+**/GoogleService-Info.plist
+!**/GoogleService-Info.plist.sample

@@ -6,4 +6,4 @@ See [shared-buddy docs](https://github.com/rodrigofranzoi/shared-buddy/blob/main
 
 - Project: `buddy-suite-macos`
 - Products: Analytics + Crashlytics
-- Config: `Resources/GoogleService-Info.plist`
+- Config: `Resources/GoogleService-Info.plist` (**gitignored** — download from Firebase console; see sample in this folder)
