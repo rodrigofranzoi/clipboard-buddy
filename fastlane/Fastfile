@@ -1,0 +1,16 @@
+# Clipboard Buddy — Fastlane entrypoint
+# Requires: Vendor/shared-buddy linked, ASC API key env vars (see screenshot-buddy/FASTLANE.md)
+
+ENV["BUDDY_APP_KEY"] ||= "clipboard"
+ENV["BUDDY_SCHEME"] ||= "ClipboardBuddy"
+ENV["BUDDY_XCODEPROJ"] ||= "ClipboardBuddy.xcodeproj"
+ENV["BUDDY_BUNDLE_ID"] ||= "com.buddy.clipboard"
+ENV["BUDDY_APP_STORE_ID"] ||= "6809226741"
+ENV["BUDDY_PRODUCT_NAME"] ||= "Clipboard Buddy"
+ENV["BUDDY_TEAM_ID"] ||= "G42Z863W7H"
+ENV["FASTLANE_TEAM_ID"] ||= ENV["BUDDY_TEAM_ID"]
+
+shared = File.expand_path("../Vendor/shared-buddy/scripts/store/Fastfile", __dir__)
+shared = File.expand_path("../../shared-buddy/scripts/store/Fastfile", __dir__) unless File.exist?(shared)
+UI.user_error!("Shared Fastfile not found (link Vendor/shared-buddy).") unless File.exist?(shared)
+import(shared)

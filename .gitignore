@@ -9,3 +9,19 @@ Vendor/shared-buddy
 # Firebase client config (API key) — keep local; do not commit
 **/GoogleService-Info.plist
 !**/GoogleService-Info.plist.sample
+
+# Fastlane
+vendor/bundle/
+.bundle/
+build/
+*.pkg
+.env
+fastlane/.env
+fastlane/.env.*
+!fastlane/.env.example
+AuthKey_*.p8
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/README.md
+fastlane/metadata/
+fastlane/screenshots/

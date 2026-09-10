@@ -26,9 +26,7 @@ struct SettingsView: View {
                 BuddyClearHistorySettingsSection(itemNoun: "clippings") {
                     store.clearAllHistory()
                 }
-                Section("Startup") {
-                    BuddyLaunchAtLoginToggle()
-                }
+                BuddyStartupSettingsSection()
             case BuddySettingsItem.privacy.id:
                 SensitivePrivacySettingsSection()
                 BuddyLegalLinksSection(brand: brand)
